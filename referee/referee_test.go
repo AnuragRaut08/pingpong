@@ -1,8 +1,8 @@
 package referee
 
 import (
-	"pingpong/player"
 	"testing"
+	"pingpong/player"
 )
 
 func TestStartTournament(t *testing.T) {
@@ -13,6 +13,6 @@ func TestStartTournament(t *testing.T) {
 		{Name: "Rohan", DefenseLength: 4},
 	}
 
-	ref := Referee{Players: players}
+	ref := Referee{Players: players} // ✅ This works since it's in the same package
 	ref.StartTournament()
 }
